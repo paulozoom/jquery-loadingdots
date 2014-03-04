@@ -43,6 +43,7 @@
 
         // Set an interval for the `increment` method, starting the dots behaviour
         play: function() {
+          this.$el.removeClass('paused');
           this.interval = window.setInterval($.proxy(this.increment, this), this.options.speed);
         },
 
@@ -58,6 +59,7 @@
 
         // Pause dots
         pause: function() {
+          this.$el.addClass('paused');
           window.clearInterval(this.interval);
         },
 
