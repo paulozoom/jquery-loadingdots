@@ -76,10 +76,15 @@
        *   string                - calls the corresponding `base` method
        */
       var DATA_OBJ_NAME = 'loadingdots';
-      if (!$(el).data(DATA_OBJ_NAME) && (!options || typeof options == 'object')) {
-        var _options = $.extend({}, defaultOptions, options);
-        $(el).data(DATA_OBJ_NAME, base);
-        $(el).data(DATA_OBJ_NAME).init(_options);
+      if (!options || typeof options == 'object') {
+        if (!$(el).data(DATA_OBJ_NAME)) {
+          var _options = $.extend({}, defaultOptions, options);
+          $(el).data(DATA_OBJ_NAME, base);
+          $(el).data(DATA_OBJ_NAME).init(_options);
+        }
+        else {
+          $(el).data(DATA_OBJ_NAME).start();
+        }
       }
       else if (typeof options == 'string') {
         $(el).data(DATA_OBJ_NAME)[options]();
