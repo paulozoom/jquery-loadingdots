@@ -35,7 +35,7 @@
         },
 
         // Update the element’s HTML, and call `play` method
-        start: function(),
+        start: function() {
           this.$el.html('<span class="word"></span><span class="dots"></span>').addClass('loading');
           this.$el.find('.word').text(this.options.word);
           this.play();
