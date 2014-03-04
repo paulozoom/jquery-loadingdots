@@ -1,6 +1,7 @@
 # Loading Dots
 
-Loading Dots is a jQuery plugin for “Loading...” behaviour, with incremental dots.
+Loading Dots is a jQuery plugin for “Loading...” behaviour, with incremental dots.  
+Inspired by http://css-tricks.com/loading-dots-plugin/
 
 ## Install
 
