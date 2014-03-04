@@ -9,7 +9,7 @@ With bower: `bower install jquery-loadingdots`.
 ## Usage
 
 Call `loadingdots()` on your jQuery object. Takes optional parameters, which default to:
-```json
+```javascript
 {
   word:   'Loading',  // String, Word prefixing the dots
   dots:   3,          // Number, maximum number of dots
@@ -41,7 +41,7 @@ Available methods:
 * `stop`: Stops the dots (calls `pause`) and clears the element’s HTML content.
 * `start`: Builds the element’s HTML content and starts the dot (calls `play`)
 
-Example:
+Examples:
 ```javascript
 // Init
 $('p').loadingdots();
