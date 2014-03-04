@@ -1,0 +1,14 @@
+{
+  "name": "jquery-loadingdots",
+  "version": "1.0",
+  "main": ["jquery.loadingdots.js", "jquery.loadingdots.min.js"],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+
+  "dependencies": {
+    "jquery": ">=1.4.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name":         "loadingdots",
+  "title":        "jQuery Loading Dots",
+  "description":  "jQuery plugin for incremental 'Loading...' dots behavior.",
+  "keywords":     ["loading"],
+  "version":      "1.0",
+
+  "author": {
+    "name":       "Paulo Zoom",
+    "url":        "http://paulozoom.com",
+    "email":      "paulo@paulozoom.com"
+  },
+
+  "licenses": [
+    {
+      "type": "MIT",
+      "url":  "http://opensource.org/licenses/MIT"
+    }
+  ],
+
+  "dependencies": {
+    "jquery": ">=1.4.0"
+  },
+
+  "homepage": "https://github.com/paulozoom/jquery-loadingdots",
+  "docs":     "https://github.com/paulozoom/jquery-loadingdots",
+  "bugs":     "https://github.com/paulozoom/jquery-loadingdots/issues"
+}
