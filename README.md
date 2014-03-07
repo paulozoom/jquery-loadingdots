@@ -39,12 +39,14 @@ You can also set options via `data-*` attributes:
 
 Example:
 ```html
-<!-- No word and 5 dots -->
+<!-- Custom options -->
 <p data-loadingdots-word="Processing" data-loadingdots-speed="250"></p>
 
 <!-- You can set an empty string -->
 <p data-loadingdots-word="" data-loadingdots-dots="5"></p>
 ```
+
+**Note:** Setting options via `data-loadingdots-*` attributes overrides options set with `.loadingdots()`.
 
 ### Methods
 
