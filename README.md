@@ -8,12 +8,14 @@ With bower: `bower install jquery-loadingdots`.
 
 ## Usage
 
+### Options
+
 Call `loadingdots()` on your jQuery object. Takes optional parameters, which default to:
 ```javascript
 {
-  word:   'Loading',  // String, Word prefixing the dots
-  dots:   3,          // Number, maximum number of dots
-  speed:  400         // Number, time in miliseconds of dots increasing interval
+  word:   'Loading',  // String: Word prefixing the dots
+  dots:   3,          // Number: Maximum number of dots
+  speed:  400         // Number: Time, in miliseconds, between dots increase
 }
 ```
 
@@ -30,7 +32,21 @@ $('p').loadingdots({ word: 'Processing', speed: 250 });
 $('p').loadingdots({ word: '', dots: 5 });
 ```
 
-## Methods
+You can also set options via `data-*` attributes:
+* `data-loadingdots-word`: Word prefixig the dots
+* `data-loadingdots-dots`: Maximum number of dots
+* `data-loadingdots-speed`: Time, in miliseconds, between dots increase
+
+Example:
+```html
+<!-- No word and 5 dots -->
+<p data-loadingdots-word="Processing" data-loadingdots-speed="250"></p>
+
+<!-- You can set an empty string -->
+<p data-loadingdots-word="" data-loadingdots-dots="5"></p>
+```
+
+### Methods
 
 If you pass a string to `loadingdots` after initializing it, you can control its behaviour.
 

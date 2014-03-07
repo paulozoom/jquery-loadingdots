@@ -76,19 +76,33 @@
        *   object/undefined/null - overrides `defaultOptions` with `options` (if any), and starts plugin
        *   string                - calls the corresponding `base` method
        */
-      var DATA_OBJ_NAME = 'loadingdots';
+      var dataObjectKey = 'loadingdots';
       if (!options || typeof options == 'object') {
-        if (!$(el).data(DATA_OBJ_NAME)) {
-          var _options = $.extend({}, defaultOptions, options);
-          $(el).data(DATA_OBJ_NAME, base);
-          $(el).data(DATA_OBJ_NAME).init(_options);
+
+        // If Loading Dots hasn't been initialized yet
+        if (!$(el).data(dataObjectKey)) {
+
+          // Fetch options set via data-loadingdots-(word|dots|speed)
+          var dataOptions = {};
+          $.each(defaultOptions, function(key) {
+            var dataOption = $(el).data(dataObjectKey+'-'+key);
+            if (dataOption !== undefined) { dataOptions[key] = dataOption; }
+          });
+
+          // Override `defaultOptions` with `options`, and then with `dataOptions`
+          var _options = $.extend({}, defaultOptions, options, dataOptions);
+
+          // Set `base` as data-loadingdots, and init with _options
+          $(el).data(dataObjectKey, base);
+          $(el).data(dataObjectKey).init(_options);
+
         }
-        else {
-          $(el).data(DATA_OBJ_NAME).start();
+        else { // If Loading Dots is initialized, call start
+          $(el).data(dataObjectKey).start();
         }
       }
       else if (typeof options == 'string') {
-        $(el).data(DATA_OBJ_NAME)[options]();
+        $(el).data(dataObjectKey)[options]();
       }
 
     });
