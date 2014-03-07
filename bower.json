@@ -1,6 +1,6 @@
 {
   "name": "jquery-loadingdots",
-  "version": "1.1.2",
+  "version": "1.2",
   "main": ["jquery.loadingdots.js", "jquery.loadingdots.min.js"],
   "ignore": [
     "**/.*",
